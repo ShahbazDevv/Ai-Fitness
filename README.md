@@ -26,6 +26,32 @@
 
 **AI Fitness** is a next-generation fitness application that leverages artificial intelligence to deliver personalized workout plans, diet recommendations, and real-time body analysis. Built with Flutter and powered by HuggingFace AI models, the app serves as your complete digital fitness companion.
 
+---
+
+## 📱 App Screenshots
+
+<div align="center">
+
+| Splash | Sign In |
+|--------|---------|
+| <img src="assets/screenshots/splash.png" width="220"> | <img src="assets/screenshots/signin.png" width="220"> |
+
+| Home Page | AI Coach |
+|-----------|-----------|
+| <img src="assets/screenshots/homepage.png" width="220"> | <img src="assets/screenshots/Aicoach.png" width="220"> |
+
+| Workout | Progress |
+|---------|----------|
+| <img src="assets/screenshots/workout.png" width="220"> | <img src="assets/screenshots/progress.png" width="220"> |
+
+| Settings |
+|----------|
+| <img src="assets/screenshots/settings.png" width="220"> |
+
+</div>
+
+---
+
 <div align="center">
 
 | What You Can Do | |
@@ -185,27 +211,7 @@ lib/
 └── main.dart              # App entry point
 ```
 
----
 
-## 📱 App Screenshots
-
-<div align="center">
-
-| Splash | Login | Signup | Home |
-|--------|-------|--------|------|
-| <img src="screenshots/splash.png" width="220"> | <img src="screenshots/login.png" width="220"> | <img src="screenshots/signup.png" width="220"> | <img src="screenshots/home.png" width="220"> |
-
-| AI Coach | Body Scan | Workout | Diet Plan |
-|----------|-----------|---------|-----------|
-| <img src="screenshots/aicoach.png" width="220"> | <img src="screenshots/bodyscan.png" width="220"> | <img src="screenshots/workout.png" width="220"> | <img src="screenshots/diet.png" width="220"> |
-
-| Progress | Profile | Water Tracker | BMI |
-|----------|---------|---------------|-----|
-| <img src="screenshots/progress.png" width="220"> | <img src="screenshots/profile.png" width="220"> | <img src="screenshots/water.png" width="220"> | <img src="screenshots/bmi.png" width="220"> |
-
-</div>
-
----
 
 ## 🚀 Installation
 
