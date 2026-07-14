@@ -1,0 +1,81 @@
+name: ai_fitness
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  get: ^4.6.6
+  supabase_flutter: ^2.6.0
+  http: ^1.2.0
+  flutter_screenutil: ^5.9.3
+  flutter_dotenv: ^5.2.1
+  shared_preferences: ^2.2.3
+  google_fonts: ^6.2.1
+  cached_network_image: ^3.4.1
+  image_picker: ^1.1.2
+  permission_handler: ^11.3.1
+  intl: ^0.19.0
+  fl_chart: ^0.69.0
+  lottie: ^3.1.2
+  flutter_svg: ^2.0.10+1
+  connectivity_plus: ^6.0.5
+  uuid: ^4.4.0
+  path_provider: ^2.1.3
+  health: ^13.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+    - assets/ai_based_fitness_logo/
+    - assets/ai_coach_chat/
+    - assets/diet_plan/
+    - assets/home_dashboard_updated/
+    - assets/login/
+    - assets/onboarding_ai_guidance/
+    - assets/onboarding_nutrition/
+    - assets/onboarding_workout_plans/
+    - assets/profile/
+    - assets/settings/
+    - assets/sign_up/
+    - assets/splash_screen/
+    - assets/workouts/
+    - assets/a_high_tech_futuristic_3d_illustration_of_an_ai_glowing_brain_or_pulse_icon/
+    - assets/a_luxurious_3d_render_of_a_healthy_salad_bowl_with_glowing_vitamin_icons_and/
+    - assets/a_premium_3d_illustration_of_a_futuristic_glowing_dumbbell_with_digital_data/
+    - assets/cinematic_low_angle_shot_of_a_professional_athlete_performing_a_squat_in_a_high/
+    - assets/close_up_of_a_high_tech_gym_workout_focus_on_glowing_equipment_and_a_fit_person/
+

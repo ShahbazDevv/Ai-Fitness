@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI-Based Fitness - Splash</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#68000b",
+                        "on-primary-container": "#5c0002",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "secondary-fixed": "#ffdad7",
+                        "outline": "#ad8883",
+                        "on-secondary-fixed-variant": "#930014",
+                        "tertiary-container": "#929090",
+                        "primary-fixed": "#ffdad5",
+                        "on-surface-variant": "#e7bdb7",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed": "#410004",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-tint": "#ffb4aa",
+                        "secondary-container": "#b2001b",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "primary-container": "#ff5545",
+                        "on-surface": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary": "#ffb3ae",
+                        "on-primary-fixed": "#410001",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#c8c6c5",
+                        "on-tertiary-container": "#2a2a2a",
+                        "surface-container-highest": "#353534",
+                        "surface-container": "#201f1f",
+                        "inverse-primary": "#c0000a",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "outline-variant": "#5d3f3b",
+                        "on-primary-fixed-variant": "#930005",
+                        "on-secondary-container": "#ffbdb8",
+                        "on-primary": "#690003",
+                        "on-tertiary": "#313030",
+                        "surface": "#131313",
+                        "surface-bright": "#3a3939",
+                        "primary": "#ffb4aa",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "inverse-on-surface": "#313030",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353534",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "on-background": "#e5e2e1",
+                        "background": "#131313"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "md": "24px",
+                        "lg": "32px",
+                        "xs": "8px",
+                        "xl": "48px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "gutter": "16px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0B0B0B;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .splash-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .logo-glow {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-glow::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(255,59,48,0.2) 0%, rgba(11,11,11,0) 70%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulseGlow 4s infinite alternate;
+        }
+
+        .app-name {
+            margin-top: 32px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Particle Canvas */
+        #particleCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(0.9); opacity: 0.5; }
+            100% { transform: scale(1.1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="text-on-surface antialiased">
+<!-- Particle Background -->
+<canvas id="particleCanvas"></canvas>
+<!-- Main Content -->
+<div class="splash-container">
+<div class="logo-glow w-48 h-48 md:w-64 md:h-64">
+<img alt="AI-Based Fitness Logo" class="w-full h-full object-contain rounded-2xl shadow-[0_0_40px_rgba(255,59,48,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFNPihAO5nD5VPMjNNOrLJF7mWLo42N430UQw8cpQ_LF_VJ88_lpOrwo7NNYzZfAiqv2Xv7TQfCS50gRhJ5R9m-Iximzmd9WJQ-7kuHQ1JJOXQAcH46vPmaUCaMVSMLO13-WO51ihsXh19F5YoyX1ptWf59tUyArkgpOwdYolxZLLtT-FYGJtEZEcbuHnpaBiAHxKgkpr5JY_ASybSsNoDx0gVwDJgDIpcd9tBkA8N08xx5kYeITKg"/>
+</div>
+<h1 class="app-name font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-white">AI-BASED FITNESS</h1>
+</div>
+<!-- Navigation suppressed due to Transactional/Splash intent -->
+<script>
+        // Minimalist Particle System for Red Glow Effects
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        let width, height;
+        let particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = (Math.random() - 0.5) * 0.5;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                
+                if (this.x < 0 || this.x > width) this.speedX *= -1;
+                if (this.y < 0 || this.y > height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 59, 48, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const numParticles = Math.floor((width * height) / 15000); // Responsive density
+            for (let i = 0; i < numParticles; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            // Subtle center gradient
+            const grad = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, Math.max(width, height)/2);
+            grad.addColorStop(0, 'rgba(255, 59, 48, 0.05)');
+            grad.addColorStop(1, 'rgba(11, 11, 11, 0)');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, width, height);
+
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => {
+            resize();
+            initParticles();
+        });
+
+        resize();
+        initParticles();
+        animate();
+
+        // Simulate transition to next screen after delay
+        setTimeout(() => {
+            document.querySelector('.splash-container').style.opacity = '0';
+            document.querySelector('.splash-container').style.transition = 'opacity 1s ease';
+            // Window location change would go here in real app
+        }, 3500);
+    </script>
+</body></html>

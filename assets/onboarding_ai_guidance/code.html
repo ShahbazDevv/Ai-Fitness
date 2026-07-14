@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>AI-Powered Fitness Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#68000b",
+                      "on-primary-container": "#5c0002",
+                      "primary-fixed-dim": "#ffb4aa",
+                      "secondary-fixed": "#ffdad7",
+                      "outline": "#ad8883",
+                      "on-secondary-fixed-variant": "#930014",
+                      "tertiary-container": "#929090",
+                      "primary-fixed": "#ffdad5",
+                      "on-surface-variant": "#e7bdb7",
+                      "error": "#ffb4ab",
+                      "on-secondary-fixed": "#410004",
+                      "tertiary-fixed": "#e5e2e1",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-tint": "#ffb4aa",
+                      "secondary-container": "#b2001b",
+                      "surface-container-low": "#1c1b1b",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "primary-container": "#ff5545",
+                      "on-surface": "#e5e2e1",
+                      "inverse-surface": "#e5e2e1",
+                      "secondary": "#ffb3ae",
+                      "on-primary-fixed": "#410001",
+                      "on-error-container": "#ffdad6",
+                      "tertiary": "#c8c6c5",
+                      "on-tertiary-container": "#2a2a2a",
+                      "surface-container-highest": "#353534",
+                      "surface-container": "#201f1f",
+                      "inverse-primary": "#c0000a",
+                      "on-error": "#690005",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "surface-container-high": "#2a2a2a",
+                      "error-container": "#93000a",
+                      "outline-variant": "#5d3f3b",
+                      "on-primary-fixed-variant": "#930005",
+                      "on-secondary-container": "#ffbdb8",
+                      "on-primary": "#690003",
+                      "on-tertiary": "#313030",
+                      "surface": "#131313",
+                      "surface-bright": "#3a3939",
+                      "primary": "#ffb4aa",
+                      "secondary-fixed-dim": "#ffb3ae",
+                      "inverse-on-surface": "#313030",
+                      "surface-dim": "#131313",
+                      "surface-variant": "#353534",
+                      "on-tertiary-fixed": "#1b1b1b",
+                      "on-background": "#e5e2e1",
+                      "background": "#131313"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "16px",
+                      "md": "24px",
+                      "lg": "32px",
+                      "xs": "8px",
+                      "xl": "48px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "80px",
+                      "gutter": "16px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "title-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        /* Base styles from style guidance */
+        body {
+            background-color: #0B0B0B;
+            color: #e5e2e1;
+            overflow: hidden; /* Prevent scrolling on onboarding */
+        }
+        
+        /* Glass card styling */
+        .glass-card {
+            background-color: rgba(27, 27, 27, 0.6);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        /* Red Primary Button with glow */
+        .btn-primary {
+            background: linear-gradient(135deg, #FF5545 0%, #B2001B 100%);
+            box-shadow: 0 0 20px rgba(255, 59, 48, 0.3);
+            color: #FFFFFF; /* Forced white for contrast */
+        }
+        
+        /* Ghost Button */
+        .btn-ghost {
+            background: transparent;
+            color: #e7bdb7; /* on-surface-variant */
+        }
+      </style>
+</head>
+<body class="h-screen w-full flex flex-col items-center justify-between font-body-lg antialiased">
+<!-- Top Action Area (Skip) -->
+<header class="w-full flex justify-end px-margin-mobile md:px-margin-desktop py-md z-10">
+<button class="btn-ghost font-label-caps text-label-caps py-xs px-sm hover:text-primary transition-colors tracking-widest uppercase">
+            Skip
+        </button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 w-full flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop z-10 relative">
+<!-- 3D Illustration Container (Glassmorphic) -->
+<div class="glass-card w-full max-w-sm aspect-square mb-lg flex items-center justify-center p-md relative overflow-hidden group">
+<!-- Subtle atmospheric glow behind image -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/20 to-transparent opacity-50 blur-xl"></div>
+<img alt="AI Fitness Illustration" class="w-full h-full object-contain relative z-10 transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi8zis0gP3nVZ4U47_RYTexlAsD6XT-e_1XK03lJNkTRCbfOTsC0bZGOS96D3JNwn4_GRVaxedAU6JRDOFJylcXj4A9wTfO4b1Uq1Xj9Wk0fCRUSIg9ilGNTrwSr7RI4-BAWSqgTSgYgYfQ-RzV0G_LODz3brfRDz66BFb3BhLeC4psLIOsuiYzGdeacDJsZtPJeJCWAp2oLCGot210q9Ivv2u9iVTMWrbd2eVnc6mJBWxBY93p3R4"/>
+</div>
+<!-- Text Content -->
+<div class="text-center w-full max-w-md space-y-sm">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">
+                AI-Powered Fitness
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[280px] mx-auto">
+                Personalized AI guidance for your health goals.
+            </p>
+</div>
+</main>
+<!-- Bottom Action Area (Dots & Button) -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop pb-xl pt-lg flex flex-col items-center z-10 space-y-lg">
+<!-- Dot Indicators -->
+<div class="flex space-x-2">
+<div class="w-8 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(255,180,170,0.5)] transition-all duration-300"></div>
+<div class="w-2 h-2 rounded-full bg-surface-variant transition-all duration-300"></div>
+<div class="w-2 h-2 rounded-full bg-surface-variant transition-all duration-300"></div>
+</div>
+<!-- Next Button -->
+<button class="btn-primary w-full max-w-md rounded-full py-md font-title-md text-title-md flex items-center justify-center space-x-xs active:scale-95 transition-transform duration-200">
+<span>Next</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward" data-weight="fill" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+</footer>
+<!-- Note: TopAppBar and BottomNavBar are suppressed as this is a linear/transactional onboarding screen -->
+</body></html>

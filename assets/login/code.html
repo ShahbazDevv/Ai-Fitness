@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI-Based Fitness - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#68000b",
+                      "on-primary-container": "#5c0002",
+                      "primary-fixed-dim": "#ffb4aa",
+                      "secondary-fixed": "#ffdad7",
+                      "outline": "#ad8883",
+                      "on-secondary-fixed-variant": "#930014",
+                      "tertiary-container": "#929090",
+                      "primary-fixed": "#ffdad5",
+                      "on-surface-variant": "#e7bdb7",
+                      "error": "#ffb4ab",
+                      "on-secondary-fixed": "#410004",
+                      "tertiary-fixed": "#e5e2e1",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-tint": "#ffb4aa",
+                      "secondary-container": "#b2001b",
+                      "surface-container-low": "#1c1b1b",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "primary-container": "#ff5545",
+                      "on-surface": "#e5e2e1",
+                      "inverse-surface": "#e5e2e1",
+                      "secondary": "#ffb3ae",
+                      "on-primary-fixed": "#410001",
+                      "on-error-container": "#ffdad6",
+                      "tertiary": "#c8c6c5",
+                      "on-tertiary-container": "#2a2a2a",
+                      "surface-container-highest": "#353534",
+                      "surface-container": "#201f1f",
+                      "inverse-primary": "#c0000a",
+                      "on-error": "#690005",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "surface-container-high": "#2a2a2a",
+                      "error-container": "#93000a",
+                      "outline-variant": "#5d3f3b",
+                      "on-primary-fixed-variant": "#930005",
+                      "on-secondary-container": "#ffbdb8",
+                      "on-primary": "#690003",
+                      "on-tertiary": "#313030",
+                      "surface": "#131313",
+                      "surface-bright": "#3a3939",
+                      "primary": "#ffb4aa",
+                      "secondary-fixed-dim": "#ffb3ae",
+                      "inverse-on-surface": "#313030",
+                      "surface-dim": "#131313",
+                      "surface-variant": "#353534",
+                      "on-tertiary-fixed": "#1b1b1b",
+                      "on-background": "#e5e2e1",
+                      "background": "#131313"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "16px",
+                      "md": "24px",
+                      "lg": "32px",
+                      "xs": "8px",
+                      "xl": "48px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "80px",
+                      "gutter": "16px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "title-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "title-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0B0B0B;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        
+        /* Glassmorphism utility classes */
+        .glass-panel {
+            background-color: rgba(27, 27, 27, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-input {
+            background-color: rgba(27, 27, 27, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-input:focus {
+            border-color: #ff5545; /* Primary Red */
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 85, 69, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff5545 0%, #b2001b 100%);
+            box-shadow: 0 0 20px rgba(255, 59, 48, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 0 30px rgba(255, 59, 48, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Animated background elements */
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            animation: float 20s infinite ease-in-out alternate;
+        }
+        
+        .orb-red {
+            background: rgba(255, 85, 69, 0.15);
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            right: -100px;
+        }
+        
+        .orb-dark {
+            background: rgba(42, 42, 42, 0.5);
+            width: 500px;
+            height: 500px;
+            bottom: -200px;
+            left: -100px;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 50px) scale(1.1); }
+            100% { transform: translate(20px, -20px) scale(0.9); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col items-center justify-center relative p-margin-mobile md:p-margin-desktop font-body-lg text-body-lg">
+<!-- Atmospheric Background Elements -->
+<div class="bg-orb orb-red"></div>
+<div class="bg-orb orb-dark"></div>
+<!-- Background Image with Overlay for Depth -->
+<div class="absolute inset-0 z-[-2] opacity-30">
+<div class="bg-cover bg-center w-full h-full" data-alt="A dark, cinematic fitness environment with abstract lighting. Deep obsidian tones with subtle, energetic red highlights reflecting off metallic workout equipment. The atmosphere is intense, premium, and focused, resembling a high-end, futuristic training facility. Soft, volumetric light cuts through the darkness." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmp3l2bInst7rXXlhZeYndEpVnO-QlZIMPQD3C2Zf-WuVg9SC9NsiQFeJ2NnHCSV9Vb9q34Axy_DxnbhoLPzHuNsPI1pUlWOzFbaUMMXhfze3xa33Uw8ZzzFm8rxkAS8sSlnI0km8r0OQYKvkq4J3tHFq1MUPB2Fm1Wz6XHVeINdP4HIu5pzaR1qghSdsjUiE2OZw73D5AJ63u8bf3VlvdTrP_ds83ST-t7QqBeQI7gkLfi-pSWAGc')"></div>
+</div>
+<!-- Login Container -->
+<main class="w-full max-w-[480px] z-10">
+<!-- Brand Header -->
+<div class="text-center mb-lg">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg font-bold text-on-surface tracking-tight mb-xs">AI-Based Fitness</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Elevate your performance.</p>
+</div>
+<!-- Glass Card -->
+<div class="glass-panel rounded-xl p-md md:p-lg w-full flex flex-col gap-md">
+<div class="text-center mb-sm">
+<h2 class="font-title-md text-title-md text-on-surface mb-base">Welcome Back</h2>
+<p class="font-body-sm text-body-sm text-tertiary">Enter your credentials to continue your journey.</p>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-sm w-full" onsubmit="event.preventDefault();">
+<!-- Email Input -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-sm flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-tertiary-container font-light" style="font-variation-settings: 'wght' 200;">mail</span>
+</div>
+<input class="glass-input w-full h-[56px] rounded-lg pl-[48px] pr-sm text-on-surface placeholder-tertiary-container focus:ring-0 focus:border-primary-container block font-body-lg" id="email" placeholder="Email Address" required="" type="email"/>
+</div>
+<!-- Password Input -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-sm flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-tertiary-container font-light" style="font-variation-settings: 'wght' 200;">lock</span>
+</div>
+<input class="glass-input w-full h-[56px] rounded-lg pl-[48px] pr-sm text-on-surface placeholder-tertiary-container focus:ring-0 focus:border-primary-container block font-body-lg" id="password" placeholder="Password" required="" type="password"/>
+</div>
+<!-- Forgot Password -->
+<div class="flex justify-end w-full">
+<a class="font-body-sm text-body-sm text-tertiary hover:text-primary transition-colors duration-200" href="#">Forgot Password?</a>
+</div>
+<!-- Log In Button -->
+<button class="btn-primary w-full h-[56px] rounded-full text-white font-title-md text-title-md mt-sm flex items-center justify-center gap-xs" type="submit">
+                    Log In
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="flex items-center justify-center w-full my-xs">
+<div class="h-[1px] bg-surface-container-highest flex-grow"></div>
+<span class="font-label-caps text-label-caps text-tertiary px-sm uppercase tracking-wider">or</span>
+<div class="h-[1px] bg-surface-container-highest flex-grow"></div>
+</div>
+<!-- Google Login -->
+<button class="btn-secondary w-full h-[56px] rounded-full text-on-surface font-title-md text-title-md flex items-center justify-center gap-sm" type="button">
+<!-- SVG Google Icon -->
+<svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.56 12.25C22.56 11.47 22.49 10.72 22.37 10H12V14.26H17.92C17.67 15.63 16.89 16.78 15.74 17.55V20.31H19.31C21.4 18.38 22.56 15.58 22.56 12.25Z" fill="#4285F4"></path>
+<path d="M12 23C14.97 23 17.46 22.02 19.31 20.31L15.74 17.55C14.76 18.21 13.48 18.6 12 18.6C9.13 18.6 6.69 16.66 5.8 14.07H2.12V16.92C3.95 20.55 7.68 23 12 23Z" fill="#34A853"></path>
+<path d="M5.8 14.07C5.57 13.39 5.44 12.7 5.44 12C5.44 11.3 5.57 10.61 5.8 9.93V7.08H2.12C1.36 8.59 0.93 10.25 0.93 12C0.93 13.75 1.36 15.41 2.12 16.92L5.8 14.07Z" fill="#FBBC05"></path>
+<path d="M12 5.4C13.62 5.4 15.06 5.96 16.21 7.06L19.39 3.88C17.46 2.08 14.97 1 12 1C7.68 1 3.95 3.45 2.12 7.08L5.8 9.93C6.69 7.34 9.13 5.4 12 5.4Z" fill="#EA4335"></path>
+</svg>
+                Continue with Google
+            </button>
+<!-- Sign Up Link -->
+<div class="text-center mt-xs">
+<p class="font-body-sm text-body-sm text-tertiary">
+                    Don't have an account? 
+                    <a class="text-primary hover:text-white transition-colors duration-200 font-semibold" href="#">Sign up</a>
+</p>
+</div>
+</div>
+</main>
+</body></html>

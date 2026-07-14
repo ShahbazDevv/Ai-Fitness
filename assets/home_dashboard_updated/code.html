@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI-Based Fitness - Home</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Glassmorphism Utilities */
+        .glass-card {
+            background-color: rgba(28, 27, 27, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-chip {
+            background-color: rgba(28, 27, 27, 0.8);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .red-glow {
+            box-shadow: 0 0 20px rgba(255, 59, 48, 0.3);
+        }
+        
+        .bg-aura-gradient {
+            background: linear-gradient(135deg, #FF3B30 0%, #B3001B 100%);
+        }
+    </style>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-surface": "#e5e2e1",
+                "on-error": "#690005",
+                "error-container": "#93000a",
+                "on-tertiary-fixed-variant": "#474746",
+                "on-background": "#e5e2e1",
+                "on-secondary": "#68000b",
+                "on-secondary-container": "#ffbdb8",
+                "error": "#ffb4ab",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "primary-container": "#ff5545",
+                "on-tertiary-container": "#2a2a2a",
+                "on-secondary-fixed": "#410004",
+                "surface-container-high": "#2a2a2a",
+                "on-primary": "#690003",
+                "surface-bright": "#3a3939",
+                "tertiary-fixed": "#e5e2e1",
+                "tertiary": "#c8c6c5",
+                "surface-tint": "#ffb4aa",
+                "on-error-container": "#ffdad6",
+                "tertiary-container": "#929090",
+                "on-primary-fixed": "#410001",
+                "surface-container-lowest": "#0e0e0e",
+                "outline-variant": "#5d3f3b",
+                "surface-variant": "#353534",
+                "surface-container-low": "#1c1b1b",
+                "secondary-container": "#b2001b",
+                "on-primary-container": "#5c0002",
+                "primary-fixed": "#ffdad5",
+                "surface-container-highest": "#353534",
+                "on-surface-variant": "#e7bdb7",
+                "on-tertiary-fixed": "#1b1b1b",
+                "primary": "#ffb4aa",
+                "surface-dim": "#131313",
+                "surface": "#131313",
+                "inverse-primary": "#c0000a",
+                "secondary-fixed": "#ffdad7",
+                "on-primary-fixed-variant": "#930005",
+                "on-secondary-fixed-variant": "#930014",
+                "primary-fixed-dim": "#ffb4aa",
+                "on-tertiary": "#313030",
+                "inverse-surface": "#e5e2e1",
+                "background": "#0B0B0B",
+                "inverse-on-surface": "#313030",
+                "secondary-fixed-dim": "#ffb3ae",
+                "secondary": "#ffb3ae",
+                "outline": "#ad8883",
+                "surface-container": "#201f1f"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "gutter": "16px",
+                "lg": "32px",
+                "xs": "8px",
+                "margin-mobile": "20px",
+                "base": "4px",
+                "margin-desktop": "80px",
+                "xl": "48px",
+                "sm": "16px",
+                "md": "24px"
+        },
+        "fontFamily": {
+                "display-lg": [
+                        "Inter"
+                ],
+                "title-md": [
+                        "Inter"
+                ],
+                "body-sm": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Inter"
+                ],
+                "label-caps": [
+                        "Inter"
+                ],
+                "headline-lg-mobile": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "title-md": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "28px",
+                        {
+                                "lineHeight": "34px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-[#0B0B0B] text-[#FFFFFF] min-h-screen pb-24 font-body-lg">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-40 bg-[#0B0B0B]/80 backdrop-blur-md border-b border-white/5">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop h-16 flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[#FF3B30] text-[28px]" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="font-headline-lg-mobile md:font-headline-lg text-[#FFFFFF] font-bold tracking-tight">AI-Based Fitness</span>
+</div>
+<div class="flex items-center gap-sm">
+<button class="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#FFFFFF]" style="font-variation-settings: 'wght' 300;">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-[#FF3B30] rounded-full"></span>
+</button>
+<button class="w-10 h-10 rounded-full overflow-hidden border border-white/10 hover:border-white/30 transition-colors">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A detailed, close-up profile portrait of a confident athlete in a modern, dark-themed gym environment. Soft red neon lighting highlights the contours of their face. Premium, high-performance aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDapH_CJlx08VONMMNC1z4ewAhQUArIzYPh-js5XbWcdBpJuoKnoISgsUmI7rDFjX9avIjSrqNa1nFkARkRrVfdAk8qiTzoBpNJOBduN6MThj3CEtr-q2oPTiAEbIlKDXLn-f1BDQSyE8w3s1eGvO33SS8LhXw-AiDTljQ_d1U5yvWmb7A5xO-UKmw1Kvi2QRdyViWbkF4hZEOfk5t0zFaDtqGDBOmiUprKllb-85xiytkVtR13fSE5"/>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto flex flex-col gap-lg">
+<!-- Welcome & Motivational Quote -->
+<section class="flex flex-col gap-xs pt-sm">
+<h1 class="font-display-lg text-display-lg text-[#FFFFFF]">Hello, Alex</h1>
+<p class="font-title-md text-title-md text-[#A0A0A0]">"Push your limits today."</p>
+</section>
+<!-- Main Dashboard Layout (Grid for Desktop, Stack for Mobile) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left/Top Column: Progress & Quick Actions -->
+<div class="md:col-span-8 flex flex-col gap-md">
+<!-- Main AI Progress Card -->
+<div class="glass-card rounded-xl p-md relative overflow-hidden flex flex-col md:flex-row items-center gap-lg">
+<!-- Decorative Background element -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-[#FF3B30] rounded-full blur-[100px] opacity-10 pointer-events-none"></div>
+<!-- Circular Progress -->
+<div class="relative w-48 h-48 flex-shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" r="45" stroke="rgba(255,255,255,0.05)" stroke-width="6"></circle>
+<!-- 75% complete -->
+<circle class="transition-all duration-1000 ease-out" cx="50" cy="50" fill="none" r="45" stroke="url(#red-gradient)" stroke-dasharray="282.7" stroke-dashoffset="70.6" stroke-linecap="round" stroke-width="6"></circle>
+<defs>
+<lineargradient id="red-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#FF3B30"></stop>
+<stop offset="100%" stop-color="#B3001B"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-display-lg text-display-lg text-[#FFFFFF] tracking-tighter">75<span class="text-title-md text-[#FF3B30]">%</span></span>
+<span class="font-label-caps text-label-caps text-[#A0A0A0] uppercase mt-1">Goal Reached</span>
+</div>
+</div>
+<!-- AI Insights -->
+<div class="flex flex-col gap-sm z-10 w-full">
+<div class="glass-chip self-start px-3 py-1 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-[#FF3B30] text-[14px]">auto_awesome</span>
+<span class="font-label-caps text-label-caps text-[#FFFFFF]">AI Coach Insight</span>
+</div>
+<p class="font-body-lg text-body-lg text-[#FFFFFF]">Your recovery rate is excellent today. We recommend prioritizing high-intensity interval training to maximize your calorie burn and push your aerobic capacity.</p>
+</div>
+</div>
+<!-- Quick Actions -->
+<h2 class="font-title-md text-title-md text-[#FFFFFF] mt-sm">Quick Actions</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-gutter">
+<!-- Primary Action -->
+<button class="bg-aura-gradient text-[#FFFFFF] rounded-xl p-md flex flex-col items-start gap-md red-glow transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[32px]">fitness_center</span>
+<div class="flex flex-col items-start text-left">
+<span class="font-title-md text-title-md font-bold">Start Workout</span>
+<span class="font-body-sm text-body-sm opacity-90">AI-tailored session</span>
+</div>
+</button>
+<!-- Secondary Actions -->
+<button class="glass-card text-[#FFFFFF] hover:bg-white/5 transition-colors rounded-xl p-md flex flex-col items-start gap-md active:scale-95">
+<span class="material-symbols-outlined text-[#FF3B30] text-[32px]" style='font-variation-settings: "wght" 200;'>restaurant_menu</span>
+<div class="flex flex-col items-start text-left">
+<span class="font-title-md text-title-md font-semibold">Diet Plan</span>
+<span class="font-body-sm text-body-sm text-[#A0A0A0]">View daily macros</span>
+</div>
+</button>
+<button class="glass-card text-[#FFFFFF] hover:bg-white/5 transition-colors rounded-xl p-md flex flex-col items-start gap-md active:scale-95">
+<span class="material-symbols-outlined text-[#FF3B30] text-[32px]" style='font-variation-settings: "wght" 200;'>smart_toy</span>
+<div class="flex flex-col items-start text-left">
+<span class="font-title-md text-title-md font-semibold">AI Coach</span>
+<span class="font-body-sm text-body-sm text-[#A0A0A0]">Ask for advice</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Right/Bottom Column: Stats & Activity -->
+<div class="md:col-span-4 flex flex-col gap-md">
+<!-- 2x2 Stats Grid -->
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Weight -->
+<div class="glass-card rounded-xl p-sm flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-[#A0A0A0] text-[20px]">monitor_weight</span>
+<div>
+<div class="font-display-lg text-display-lg text-[#FFFFFF]">75<span class="text-title-md text-[#A0A0A0]">kg</span></div>
+<div class="font-label-caps text-label-caps text-[#A0A0A0]">Weight</div>
+</div>
+</div>
+<!-- BMI -->
+<div class="glass-card rounded-xl p-sm flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-[#A0A0A0] text-[20px]">accessibility_new</span>
+<div>
+<div class="font-display-lg text-display-lg text-[#FFFFFF]">22.4</div>
+<div class="font-label-caps text-label-caps text-[#A0A0A0]">BMI</div>
+</div>
+</div>
+<!-- Calories -->
+<div class="glass-card rounded-xl p-sm flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-[#FF3B30] text-[20px]">local_fire_department</span>
+<div>
+<div class="font-display-lg text-display-lg text-[#FFFFFF]">1,850</div>
+<div class="font-label-caps text-label-caps text-[#A0A0A0]">Daily Cals</div>
+</div>
+</div>
+<!-- Streak -->
+<div class="glass-card rounded-xl p-sm flex flex-col justify-between aspect-square relative overflow-hidden">
+<div class="absolute inset-0 bg-[#FF3B30]/5"></div>
+<span class="material-symbols-outlined text-[#FF3B30] text-[20px] relative z-10">bolt</span>
+<div class="relative z-10">
+<div class="font-display-lg text-display-lg text-[#FFFFFF]">12</div>
+<div class="font-label-caps text-label-caps text-[#A0A0A0]">Day Streak</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity List -->
+<div class="glass-card rounded-xl p-md flex flex-col gap-sm mt-xs">
+<h3 class="font-title-md text-title-md text-[#FFFFFF] mb-xs">Recent Activity</h3>
+<!-- Item 1 -->
+<div class="flex items-center gap-sm p-2 rounded-lg hover:bg-white/5 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-[#1C1B1B] border border-white/5 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[#FFFFFF] text-[20px]">directions_run</span>
+</div>
+<div class="flex-1 flex flex-col">
+<span class="font-body-lg text-body-lg font-semibold text-[#FFFFFF]">Morning Sprint</span>
+<span class="font-body-sm text-body-sm text-[#A0A0A0]">Today, 07:30 AM</span>
+</div>
+<span class="font-title-md text-title-md text-[#FF3B30]">+450 kcal</span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-sm p-2 rounded-lg hover:bg-white/5 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-[#1C1B1B] border border-white/5 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[#FFFFFF] text-[20px]">fitness_center</span>
+</div>
+<div class="flex-1 flex flex-col">
+<span class="font-body-lg text-body-lg font-semibold text-[#FFFFFF]">Upper Body Power</span>
+<span class="font-body-sm text-body-sm text-[#A0A0A0]">Yesterday, 06:15 PM</span>
+</div>
+<span class="font-title-md text-title-md text-[#FF3B30]">+320 kcal</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-[#0B0B0B]/80 backdrop-blur-md border-t border-white/5 pb-safe">
+<div class="max-w-md mx-auto flex justify-around items-center px-xs py-sm">
+<a class="flex flex-col items-center gap-1 text-[#FF3B30]" href="#">
+<div class="relative flex items-center justify-center w-12 h-8 rounded-full bg-[#FF3B30]/10">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<span class="font-label-caps text-[10px] font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#8A8A8E] hover:text-[#FFFFFF] transition-colors" href="#">
+<div class="relative flex items-center justify-center w-12 h-8 rounded-full">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">fitness_center</span>
+</div>
+<span class="font-label-caps text-[10px] font-medium">Workouts</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#8A8A8E] hover:text-[#FFFFFF] transition-colors" href="#">
+<div class="relative flex items-center justify-center w-12 h-8 rounded-full">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">bar_chart</span>
+</div>
+<span class="font-label-caps text-[10px] font-medium">Stats</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#8A8A8E] hover:text-[#FFFFFF] transition-colors" href="#">
+<div class="relative flex items-center justify-center w-12 h-8 rounded-full">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 0;">person</span>
+</div>
+<span class="font-label-caps text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI-Based Fitness - Sign Up</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#68000b",
+                        "on-primary-container": "#5c0002",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "secondary-fixed": "#ffdad7",
+                        "outline": "#ad8883",
+                        "on-secondary-fixed-variant": "#930014",
+                        "tertiary-container": "#929090",
+                        "primary-fixed": "#ffdad5",
+                        "on-surface-variant": "#e7bdb7",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed": "#410004",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-tint": "#ffb4aa",
+                        "secondary-container": "#b2001b",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "primary-container": "#ff5545",
+                        "on-surface": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary": "#ffb3ae",
+                        "on-primary-fixed": "#410001",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#c8c6c5",
+                        "on-tertiary-container": "#2a2a2a",
+                        "surface-container-highest": "#353534",
+                        "surface-container": "#201f1f",
+                        "inverse-primary": "#c0000a",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "outline-variant": "#5d3f3b",
+                        "on-primary-fixed-variant": "#930005",
+                        "on-secondary-container": "#ffbdb8",
+                        "on-primary": "#690003",
+                        "on-tertiary": "#313030",
+                        "surface": "#131313",
+                        "surface-bright": "#3a3939",
+                        "primary": "#ffb4aa",
+                        "secondary-fixed-dim": "#ffb3ae",
+                        "inverse-on-surface": "#313030",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353534",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "on-background": "#e5e2e1",
+                        "background": "#131313"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "md": "24px",
+                        "lg": "32px",
+                        "xs": "8px",
+                        "xl": "48px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "gutter": "16px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background-color: rgba(27, 27, 27, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-input {
+            background-color: rgba(27, 27, 27, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: border-color 0.3s ease;
+        }
+        
+        .glass-input:focus {
+            border-color: #ffb4aa;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .btn-primary-glow {
+            background: linear-gradient(135deg, #ff5545 0%, #b2001b 100%);
+            box-shadow: 0 0 20px rgba(255, 59, 48, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-glow:hover {
+            box-shadow: 0 0 25px rgba(255, 59, 48, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .btn-primary-glow:active {
+            transform: translateY(1px);
+        }
+
+        .glass-button {
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .glass-button:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Animated background elements */
+        .bg-blob-1 {
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,59,48,0.15) 0%, rgba(11,11,11,0) 70%);
+            filter: blur(60px);
+            z-index: 0;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .bg-blob-2 {
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 60vw;
+            height: 60vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,59,48,0.08) 0%, rgba(11,11,11,0) 70%);
+            filter: blur(80px);
+            z-index: 0;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg min-h-screen relative overflow-hidden flex items-center justify-center">
+<!-- Atmospheric Background -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="bg-blob-1"></div>
+<div class="bg-blob-2"></div>
+<div class="absolute inset-0 bg-background/80 backdrop-blur-[100px]"></div>
+</div>
+<!-- Main Content Container -->
+<div class="relative z-10 w-full max-w-md px-margin-mobile md:px-0 py-xl flex flex-col items-center">
+<!-- Header Section -->
+<div class="text-center mb-xl w-full">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg font-bold text-on-surface mb-xs tracking-tight">AI-Based Fitness</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Unlock your peak performance.</p>
+</div>
+<!-- Sign Up Card -->
+<div class="glass-panel rounded-xl w-full p-md md:p-lg flex flex-col gap-lg">
+<div class="text-center">
+<h2 class="font-title-md text-title-md text-on-surface">Create Account</h2>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-md w-full">
+<!-- Full Name -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" style="font-variation-settings: 'wght' 300;">person</span>
+<input class="glass-input w-full h-[56px] rounded-lg pl-xl pr-sm text-on-surface placeholder:text-on-surface-variant/50 font-body-lg text-body-lg focus:ring-0" placeholder="Full Name" type="text"/>
+</div>
+<!-- Email -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" style="font-variation-settings: 'wght' 300;">mail</span>
+<input class="glass-input w-full h-[56px] rounded-lg pl-xl pr-sm text-on-surface placeholder:text-on-surface-variant/50 font-body-lg text-body-lg focus:ring-0" placeholder="Email Address" type="email"/>
+</div>
+<!-- Password -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" style="font-variation-settings: 'wght' 300;">lock</span>
+<input class="glass-input w-full h-[56px] rounded-lg pl-xl pr-sm text-on-surface placeholder:text-on-surface-variant/50 font-body-lg text-body-lg focus:ring-0" placeholder="Password" type="password"/>
+</div>
+<!-- Confirm Password -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" style="font-variation-settings: 'wght' 300;">lock_reset</span>
+<input class="glass-input w-full h-[56px] rounded-lg pl-xl pr-sm text-on-surface placeholder:text-on-surface-variant/50 font-body-lg text-body-lg focus:ring-0" placeholder="Confirm Password" type="password"/>
+</div>
+<!-- Submit Action -->
+<button class="btn-primary-glow w-full h-[56px] rounded-full text-white font-body-lg text-body-lg font-bold flex items-center justify-center mt-sm" type="button">
+                    Create Account
+                </button>
+</form>
+<!-- Divider -->
+<div class="flex items-center w-full gap-sm">
+<div class="h-px bg-white/10 flex-1"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Or</span>
+<div class="h-px bg-white/10 flex-1"></div>
+</div>
+<!-- Secondary Action -->
+<button class="glass-button w-full h-[56px] rounded-full text-on-surface font-body-lg text-body-lg flex items-center justify-center gap-sm" type="button">
+<!-- Simple SVG for Google icon as fallback since we can't use generic material icon for specific brands easily without feeling cheap -->
+<svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<g transform="matrix(1, 0, 0, 1, 27.009001, -39.238998)">
+<path d="M -3.264 51.509 C -3.264 50.719 -3.334 49.969 -3.454 49.239 L -14.754 49.239 L -14.754 53.749 L -8.284 53.749 C -8.574 55.229 -9.424 56.479 -10.684 57.329 L -10.684 60.329 L -6.824 60.329 C -4.564 58.239 -3.264 55.159 -3.264 51.509 Z" fill="#4285F4"></path>
+<path d="M -14.754 63.239 C -11.514 63.239 -8.804 62.159 -6.824 60.329 L -10.684 57.329 C -11.764 58.049 -13.134 58.489 -14.754 58.489 C -17.884 58.489 -20.534 56.379 -21.484 53.529 L -25.464 53.529 L -25.464 56.619 C -23.494 60.539 -19.444 63.239 -14.754 63.239 Z" fill="#34A853"></path>
+<path d="M -21.484 53.529 C -21.734 52.809 -21.864 52.039 -21.864 51.239 C -21.864 50.439 -21.724 49.669 -21.484 48.949 L -21.484 45.859 L -25.464 45.859 C -26.284 47.479 -26.754 49.299 -26.754 51.239 C -26.754 53.179 -26.284 54.999 -25.464 56.619 L -21.484 53.529 Z" fill="#FBBC05"></path>
+<path d="M -14.754 43.989 C -12.984 43.989 -11.404 44.599 -10.154 45.789 L -6.734 42.369 C -8.804 40.429 -11.514 39.239 -14.754 39.239 C -19.444 39.239 -23.494 41.939 -25.464 45.859 L -21.484 48.949 C -20.534 46.099 -17.884 43.989 -14.754 43.989 Z" fill="#EA4335"></path>
+</g>
+</svg>
+                Continue with Google
+            </button>
+</div>
+<!-- Footer Link -->
+<div class="mt-lg">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors flex gap-xs items-center" href="#">
+                Already have an account? <span class="text-primary-container font-semibold">Log in</span>
+</a>
+</div>
+</div>
+</body></html>
